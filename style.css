@@ -1,0 +1,327 @@
+@font-face {
+  font-family: "TitanOne";
+  src: url(fonts/TitanOne-Regular.ttf);
+ }
+
+ .video-wrapper {
+  /*display: none;*/
+  align-self: center;
+  position: relative;
+  width: clamp(250px, 50vw, 400px);
+  height: clamp(188px, 50vh, 300px);
+  border:5px solid #f5226c;
+  border-radius: 15px;
+  background: url(images/backgroundwaves.png), #f5226c;
+  background-size: 300% 300%;
+  background-position: center;
+  animation: gradient 15s linear infinite;
+}
+
+body{
+  overflow: hidden;
+}
+
+.video-wrapper:after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: white;
+  border-radius: 18px;
+  z-index: -1;
+  box-shadow: 0px 5px #9c9c9c;
+}
+
+canvas,
+video {
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+ #background {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  }
+
+#welcomescreen, #round{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  vertical-align: center;
+  height: 98vh;
+}
+
+h1, h2, p{
+  text-align: center;
+  color: white;
+  font-family: 'TitanOne';
+  text-shadow: 3px 1.5px #9c9c9c;
+  letter-spacing: 3px;
+}
+
+p{
+  font-size: clamp(15px,15vw,50px);
+  margin: 0;
+}
+
+#timer{
+  margin: 50px 0 0 0;
+  font-size: clamp(15px,15vw,70px)!important;
+}
+
+h1{
+  font-size: clamp(15px,15vw,100px);
+  margin: 0;
+}
+
+h2{
+  font-size: clamp(15px,15vw,30px);
+  margin: 15px;
+}
+
+#title{
+  max-width: 250px;
+}
+
+#emotion {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -50px;
+  height: clamp(80px,10vw,100px);
+  width: clamp(80px,10vw,100px);
+  z-index: 100;
+  transform-origin: center;
+}
+
+button{
+  border:5px solid #f5226c;
+  border-radius: 15px;
+  text-align: center;
+  font-size: clamp(30px,3vw,40px);
+  color: white;
+  font-family: 'TitanOne';
+  text-shadow: 3px 1.5px #9c9c9c;
+  letter-spacing: 3px;
+  padding: 15px 50px;
+  background: url(images/backgroundwaves.png), #f5226c;
+  background-size: 300% 400%;
+  background-position: center;
+  margin-top: 15px;
+  position: relative;
+  cursor: pointer;
+  animation: gradient 15s linear infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+button:after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: white;
+  border-radius: 18px;
+  z-index: -1;
+  box-shadow: 0px 5px #9c9c9c;
+}
+
+button:hover{
+  background-position: center;
+  animation-play-state: running;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.arrowAnimate:hover{
+  animation: rotate 1s ease-in-out;
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+#playbtn{
+  padding: 15px 60px!important;
+  margin: 20px 20px 0 20px;
+}
+
+#back, #setting{
+  padding: 15px!important;
+  background: none;
+  background-color: aqua;
+}
+
+#emojititle{
+  height: clamp(20px,10vw,70px);
+  width: clamp(20px,10vw,70px);
+}
+
+.none{
+  display: none!important;
+}
+
+
+
+#emojimain{
+  margin: 50px;
+  height: clamp(100px,10vw,150px);
+  width: clamp(100px,10vw,150px);
+  animation: movefade 3s ease-in-out infinite;
+}
+
+@keyframes movefade {
+	0% {
+    opacity: 0;
+		transform: translate(-100%);
+	}
+  6% {
+    opacity: 0;
+	}
+	30% {
+    opacity: 100;
+		transform: translate(0%);
+	}
+  80% {
+    opacity: 100;
+		transform: translate(0%);
+	}
+  94% {
+    opacity: 0;
+	}
+	100% {
+    opacity: 0;
+		transform: translate(100%);
+	}
+}
+
+#error{
+  color: #f5226c!important;
+  font-size: clamp(15px,15vw,25px)!important;
+  margin: 8px!important;
+  text-shadow: 3px 1.5px #c21c56!important;
+}
+.danger{
+  color: #f5226c!important;
+  text-shadow: 3px 1.5px #c21c56!important;
+}
+
+@keyframes wizz {
+	0% {
+		transform: translate(0%);
+  }
+	25% {
+		transform: translate(5%) rotate(2deg);
+	}
+  50% {
+		transform: translate(-5%) rotate(-2deg);
+	}
+  75% {
+		transform: translate(5%) rotate(2deg);
+	}
+	100% {
+		transform: translate(0%);
+	}
+}
+
+.wizz{
+  animation: wizz 0.3s ease-in-out;
+}
+
+#face{
+  margin: 50px 0;
+  height: clamp(200px,10vw,300px);
+  width: clamp(200px,10vw,300px);
+  align-self: center;
+  animation: enterfadeface 0.4s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes enterfadeface {
+	0% {
+    opacity: 0;
+    transform: scale(0.1);
+		transform: translate(-100%);
+	}
+  6% {
+    opacity: 0;
+	}
+	100% {
+    opacity: 100;
+		transform: translate(0%);
+    transform: scale(1);
+	}
+}
+
+@keyframes exitfadeface {
+	0% {
+    opacity: 100;
+    transform: scale(1);
+	}
+  6% {
+    opacity: 100;
+	}
+	100% {
+    opacity: 0;
+    transform: scale(0.1);
+	}
+}
+
+#best{
+  margin: 50px 0!important;
+}
+
+.github-corner svg{
+	position:absolute;
+	right:30px;
+	top:30px;
+  mix-blend-mode: darken;
+  color: #eeeeee;
+  fill:#171515;
+	clip-path: polygon(0 0, 100% 0, 100% 100%);
+  transform: scale(2.5);
+}
+.github-corner:hover .octo-arm{
+	animation:octocat-wave .56s;
+}
+@keyframes octocat-wave{
+	0%, 100%{
+		transform:rotate(0);
+	}
+	20%, 60%{
+		transform:rotate(-20deg);
+	}
+	40%, 80%{
+		transform:rotate(10deg);
+	}
+}
+
