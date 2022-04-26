@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href="https://katatemple.herokuapp.com/"><img src="images/banner.png" alt="Kata Temple" width="200"></a>
+  <a href="https://guillaume-rygn.github.io/EmojiFace/"><img src="images/banner.png" alt="EmojiFace" width="800"></a>
   <br>
 EMOJIFACE<br>
 </h1>
@@ -12,7 +12,7 @@ EMOJIFACE<br>
 
 ## WEB version 🌐
 
-Le site est en live ici 👉 [EmojiFace](https://katatemple.herokuapp.com/)
+Le site est en live ici 👉 [EmojiFace](https://guillaume-rygn.github.io/EmojiFace/)
 
 ## Technologies utilisées ⚙️
 
