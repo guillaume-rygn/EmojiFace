@@ -78,10 +78,6 @@ face.src = emoji.url;
 let a = 0;
 let b = 0;
 
-window.addEventListener("load", function(){
-
-});
-
 navigator.mediaDevices.getUserMedia({video: true})
     .then(function (stream) {
 
@@ -140,6 +136,8 @@ async function onPlay() {
     emotionDiv.src = emotions[currentEmotion] || currentEmotion;
 
     if (emoji.emotion === currentEmotion && a == 1 && b == 0){
+      cling.pause();
+      cling.currentTime = 0;
       cling.play();
       i++;
       score.textContent = i;
