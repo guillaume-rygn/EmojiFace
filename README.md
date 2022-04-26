@@ -5,7 +5,7 @@
   <br>
 EMOJIFACE<br>
 </h1>
-<h4 align="center">60 seconds to reproduce as many emoji faces as possible!</h4>
+<h4 align="center">60 seconds to reproduce as many emoji faces as possible! Using your camera and IA face detection !</h4>
 <br>
 
 ![EmojiFace](images/main.png)
