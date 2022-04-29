@@ -191,9 +191,9 @@ function timerfct(){
       timer.style.display = "none";
       face.style.display = "none";
       if(i > maxScore){
-        maxScore = i;
+        localStorage.setItem('maxScore', i);
       }
-      bestScore.textContent = maxScore;
+      bestScore.textContent = `${localStorage.getItem('maxScore')}`;
       best.classList.remove("none");
     }
     timer.textContent = timeleft;
